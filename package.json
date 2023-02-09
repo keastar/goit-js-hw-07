@@ -1,0 +1,27 @@
+{
+  "name": "goit-js-hw-07",
+  "version": "1.0.0",
+  "description": "for_HW_JS_7",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keastar/goit-js-hw-07.git"
+  },
+  "keywords": [
+    "photo",
+    "photo-gallery",
+    "gallery"
+  ],
+  "author": "Elena Andreevna Krapivnaya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keastar/goit-js-hw-07/issues"
+  },
+  "homepage": "https://github.com/keastar/goit-js-hw-07#readme",
+  "devDependencies": {
+    "eslint": "^6.0.0"
+  }
+}
