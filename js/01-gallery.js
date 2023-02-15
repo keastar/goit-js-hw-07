@@ -1,6 +1,11 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
+const galleryContainer = document.querySelector('.gallery');
+const cardsMarkup = createImageItemsMarkup(galleryItems);
+galleryContainer.insertAdjacentHTML('beforeend', cardsMarkup);
+galleryContainer.addEventListener('click', onGalleryContainerClick);
+
 function createImageItemsMarkup(galleryItems) {
     return galleryItems.map(({ preview, original, description }) => {
         return `
@@ -18,6 +23,12 @@ function createImageItemsMarkup(galleryItems) {
         })
         .join('');
    }
-        console.log(createImageItemsMarkup(galleryItems));
+console.log(createImageItemsMarkup(galleryItems));
 
-// console.log(markup);
+function onGalleryContainerClick(event) {
+    if (!event.target.classList.contains('gallery__item')) {
+        return;
+    }
+    console.log(event.target);
+    
+}
