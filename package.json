@@ -23,5 +23,8 @@
   "homepage": "https://github.com/keastar/goit-js-hw-07#readme",
   "devDependencies": {
     "eslint": "^6.0.0"
+  },
+  "dependencies": {
+    "basiclightbox": "^5.0.4"
   }
 }
