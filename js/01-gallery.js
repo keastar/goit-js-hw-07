@@ -23,8 +23,6 @@ function createImageItemsMarkup(galleryItems) {
         })
         .join('');
 }
-    //    console.log(createImageItemsMarkup(galleryItems));
-
 
 function onGalleryContainerClick(event) {
     event.preventDefault();
@@ -32,11 +30,19 @@ function onGalleryContainerClick(event) {
     if (!isGalleryItemEl) {
         return;
     }
-    const instance = basicLightbox.create(`
-    <img src = "${event.target.dataset.source}" width="1280" height="720">
-`)
+    const instance = basicLightbox.create(
+        `<img src = "${event.target.dataset.source}" width="1280" height="720">
+        `)
 
-instance.show()
+    instance.show();
+
+    galleryContainer.addEventListener('keydown', (evn) => {
+        if (evn.key === 'Escape') {
+            instance.close();
+        }
+    });
+
     // console.log(event.target.dataset.source);
     
 }
+
