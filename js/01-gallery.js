@@ -23,26 +23,28 @@ function createImageItemsMarkup(galleryItems) {
         })
         .join('');
 }
-
 function onGalleryContainerClick(event) {
+    
     event.preventDefault();
+
     const isGalleryItemEl = event.target.classList.contains('gallery__image');
     if (!isGalleryItemEl) {
         return;
     }
-    const instance = basicLightbox.create(
-        `<img src = "${event.target.dataset.source}" width="1280" height="720">
-        `)
 
+    openCloseModalWin(event);
+    
+    // console.log(event.target.dataset.source);    
+}
+function openCloseModalWin(ev) {
+    const instance = basicLightbox.create(
+        `<img src = "${ev.target.dataset.source}" width="1280" height="720">
+        `)
     instance.show();
 
     galleryContainer.addEventListener('keydown', (evn) => {
         if (evn.key === 'Escape') {
             instance.close();
         }
-    });
-
-    // console.log(event.target.dataset.source);
-    
+    });  
 }
-
